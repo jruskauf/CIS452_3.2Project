@@ -7,14 +7,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.posting-name{
+    font-size: 20px;
+}
+
 .posting-image{
     width: 100%;
-    max-width: 150px;
-    min-height: 100px;
-    max-height: 150px;
+    max-width: 250px;
+    min-height: 200px;
+    max-height: 250px;
     display: block;
     object-fit: cover;
-    padding-bottom: 10px;
 }
 
 .posting-name{
@@ -23,9 +26,14 @@
 }
 
 .posting-description{
-    margin: 0px 0px;
-    padding-bottom: 0px;
+    border-top: 2px solid black;
+    margin: 20px auto;
+    padding-top: 15px;
     font-size: 18px;
     line-height: 30px;
+}
 
+.posting-contact{
+    color: purple;
+    font-size: 20px;
 }

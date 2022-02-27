@@ -1,24 +1,24 @@
 import React from 'react'
 import './Posting.css'
 
-const Posting = ({ posts }) => {
-    for (let i in posts) {
-        if (posts[i].id === 3) {
+const CommunityPosting1 = ({ CommunityPosts }) => {
+    for (let i in CommunityPosts) {
+        if (CommunityPosts[i].id === 1) {
             return (
                 <div className='postings'>
                     <div className='posting-name'>
-                        <h1>{posts[i].name}</h1>
+                        <h1>{CommunityPosts[i].name}</h1>
                     </div>
                     <div>
                         <img className='posting-image'
-                            src={posts[i].image}
-                            alt={posts[i].name} />
+                            src={CommunityPosts[i].image}
+                            alt={CommunityPosts[i].name} />
                     </div>
                     <div className='posting-description'>
-                        {posts[i].description}
+                        {CommunityPosts[i].description}
                     </div>
                     <div className='posting-contact'>
-                        <h3>Contact {posts[i].contact}</h3>
+                        <h3>Contact {CommunityPosts[i].contact}</h3>
                         <textarea rows="5" cols="40" name="message">
                             Enter message here
                         </textarea>
@@ -30,4 +30,4 @@ const Posting = ({ posts }) => {
     }
 }
 
-export default Posting;
+export default CommunityPosting1;

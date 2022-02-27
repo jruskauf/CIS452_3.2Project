@@ -2,17 +2,17 @@ import React from 'react'
 import './Cards.css'
 import { Link } from 'react-router-dom'
 
-const Cards = ({ posts }) => {
+const ServicesCards = ({ ServicesPosts }) => {
     return (
         <div className="cards">
             <div className='locations'>
-                <li><button><h2>Create Post</h2></button></li>
+                <button className='create'><h2>Create Post</h2></button>
                 <li><select><option>Nearby CL</option></select></li>
                 <li><select><option>Cities</option></select></li>
                 <li><select><option>States/Territories</option></select></li>
                 <li><select><option>CL Worldwide</option></select></li>
             </div>
-            {posts.map((post) => (
+            {ServicesPosts.map((post) => (
                 <div className='card'>
                     <div>
                         <img className='post-image'
@@ -27,8 +27,8 @@ const Cards = ({ posts }) => {
                     <div className='post-description'>
                         {post.description}
                     </div>
-                    <div>
-                        <Link to={'/Posting' + post.id}><button>Contact {post.contact}</button></Link>
+                    <div className='post-contact'>
+                        <Link to={'/ServicesPosting' + post.id}><button>Contact {post.contact}</button></Link>
                     </div>
                 </div>
             ))}
@@ -36,4 +36,4 @@ const Cards = ({ posts }) => {
     )
 }
 
-export default Cards;
+export default ServicesCards;

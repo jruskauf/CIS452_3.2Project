@@ -1,18 +1,26 @@
 import React from 'react'
-import Cards from '../Cards/Cards'
-import Posting1 from '../Posting/Posting1'
-import Posting2 from '../Posting/Posting2'
-import Posting3 from '../Posting/Posting3'
+import CommunityCards from '../Cards/CommunityCards/CommunityCards'
+import CommunityPosting1 from '../Posting/CommunityPosts/CommunityPosting1'
+import CommunityPosting2 from '../Posting/CommunityPosts/CommunityPosting2'
+import CommunityPosting3 from '../Posting/CommunityPosts/CommunityPosting3'
+import ServicesCards from '../Cards/ServicesCards/ServicesCards'
+import ServicesPosting1 from '../Posting/ServicesPosts/ServicesPosting1'
+import ServicesPosting2 from '../Posting/ServicesPosts/ServicesPosting2'
+import ServicesPosting3 from '../Posting/ServicesPosts/ServicesPosting3'
 import { Route, Routes } from 'react-router-dom' 
 
-const Routing = ({posts}) => {
+const Routing = ({CommunityPosts, ServicesPosts}) => {
     return(
         <div>
             <Routes>
-                <Route path='/' element={<Cards posts={posts}/>}/>
-                <Route path='/Posting1' element={<Posting1 posts={posts}/>}/>
-                <Route path='/Posting2' element={<Posting2 posts={posts}/>}/>
-                <Route path='/Posting3' element={<Posting3 posts={posts}/>}/>
+                <Route path='/' element={<CommunityCards CommunityPosts={CommunityPosts}/>}/>
+                <Route path='/CommunityPosting1' element={<CommunityPosting1 CommunityPosts={CommunityPosts}/>}/>
+                <Route path='/CommunityPosting2' element={<CommunityPosting2 CommunityPosts={CommunityPosts}/>}/>
+                <Route path='/CommunityPosting3' element={<CommunityPosting3 CommunityPosts={CommunityPosts}/>}/>
+                <Route path='/Services' element={<ServicesCards ServicesPosts={ServicesPosts}/>}/>
+                <Route path='/ServicesPosting1' element={<ServicesPosting1 ServicesPosts={ServicesPosts}/>}/>
+                <Route path='/ServicesPosting2' element={<ServicesPosting2 ServicesPosts={ServicesPosts}/>}/>
+                <Route path='/ServicesPosting3' element={<ServicesPosting3 ServicesPosts={ServicesPosts}/>}/>
             </Routes>
         </div>
     )
