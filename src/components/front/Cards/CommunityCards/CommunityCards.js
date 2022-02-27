@@ -6,7 +6,7 @@ const CommunityCards = ({ CommunityPosts }) => {
     return (
         <div className="cards">
             <div className='locations'>
-                <li><button><h2>Create Post</h2></button></li>
+                <button><h2>Create Post</h2></button>
                 <li><select><option>Nearby CL</option></select></li>
                 <li><select><option>Cities</option></select></li>
                 <li><select><option>States/Territories</option></select></li>
